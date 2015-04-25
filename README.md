@@ -92,9 +92,10 @@ Instructions and code for setting up a simple iOS Mobile Device Management (MDM)
     * Copy down the User ID which should look like com.apple.mgmt.External.hexstuffhere...  We will use it later on in step 9.
     * Right-click the certificate and select *Export...* and save it as mdm.p12
     * Run the following command to convert it to a pem file:
-
+   ```
     openssl pkcs12 -in mdm.p12 -out PushCert.pem -nodes
-
+   ```
+   
     * Move the resulting PushCert.pem file to /server/
 
  9. Generate additional certs
