@@ -62,10 +62,10 @@ Instructions and code for setting up a simple iOS Mobile Device Management (MDM)
 
  6. Use the mdmvendorsign tool to create applepush.csr
     * We're going to use the python code located in /vendor/.  If /vendor/ is currently empty, you probably forgot to init and update submodules
-
-    git submodule init 
-    git submodule update
-    
+   ```
+   git submodule init 
+   git submodule update
+   ``` 
     * Copy private.key, push.csr, and mdm.cer into /vendor/
 
     * Run the following command while in that directory:
