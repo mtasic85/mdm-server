@@ -43,21 +43,25 @@ Instructions and code for setting up a simple iOS Mobile Device Management (MDM)
 
  5. Extract MDM private key and MDM Vendor Certificate
     * Extract private key using the following command:
-
+   ```
     openssl pkcs12 -in private.p12 -nocerts -out key.pem
-
+   ```
+   
     * Strip the password from the private key using the following command:
-
+   ```
     openssl rsa -in key.pem -out private.key
-
+   ```
+   
     * Extract certificate using the following command:
-
+   ```
     openssl pkcs12 -in private.p12 -clcerts -nokeys -out cert.pem
-
+   ```
+   
     * Convert certificate to DES using the following command:
-
+   ```
     openssl x509 -in cert.pem -inform PEM -out mdm.cer -outform DES
-
+   ```
+   
     * These files will be used in the next step.
 
  6. Use the mdmvendorsign tool to create applepush.csr
@@ -65,7 +69,8 @@ Instructions and code for setting up a simple iOS Mobile Device Management (MDM)
    ```
    git submodule init 
    git submodule update
-   ``` 
+   ```
+   
     * Copy private.key, push.csr, and mdm.cer into /vendor/
 
     * Run the following command while in that directory:
