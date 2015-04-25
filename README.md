@@ -74,9 +74,10 @@ Instructions and code for setting up a simple iOS Mobile Device Management (MDM)
     * Copy private.key, push.csr, and mdm.cer into /vendor/
 
     * Run the following command while in that directory:
-
-    python mdm_vendorpython mdm_vendor_sign.py –key private.key –csr push.csr –mdm mdm.cer –out applepush.csr
-
+   ```
+    python mdm_vendor_sign.py –key private.key –csr push.csr –mdm mdm.cer –out applepush.csr
+   ```
+   
     * This should generate applepush.csr.
 
  7. Get Push Certificate from Apple
